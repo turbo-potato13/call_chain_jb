@@ -91,8 +91,8 @@ public class FunctionExecutor {
         if (indexFilter > 0 || indexMap > 0) {
             throw new TypeErrorException();
         }
-        final var patternFilter = Pattern.compile("filter\\Q{\\E\\Q(\\E*(element)*[\\Q+-*><=&|\\E0-9]+?(element)*\\Q)\\E*\\Q}\\E");
-        final var patternMap = Pattern.compile("map\\Q{\\E\\Q(\\E*(element)*[\\Q+-*><=&|\\E0-9]+(element)*\\Q)\\E*\\Q}\\E");
+        final var patternFilter = Pattern.compile("filter\\Q{\\E\\Q(\\E*(element)?([\\Q+-*><=&|\\E0-9]+?(element)?)+\\Q)\\E*\\Q}\\E");
+        final var patternMap = Pattern.compile("map\\Q{\\E\\Q(\\E*(element)?([\\Q+-*><=&|\\E0-9]+?(element)?)+\\Q)\\E*\\Q}\\E");
         final var matcherFilter = patternFilter.matcher(checkingStr);
         final var matcherMap = patternMap.matcher(checkingStr);
         final var contentRegEx = "\\Q{\\E.+\\Q}\\E";
