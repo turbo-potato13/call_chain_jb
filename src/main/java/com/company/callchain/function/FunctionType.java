@@ -1,6 +1,6 @@
-package com.company;
+package com.company.callchain.function;
 
-public enum FunctionType {
+enum FunctionType {
     MAP("map"),
     FILTER("filter");
 

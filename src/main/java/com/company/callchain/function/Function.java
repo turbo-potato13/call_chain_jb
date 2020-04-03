@@ -1,6 +1,6 @@
-package com.company;
+package com.company.callchain.function;
 
-public class Function {
+class Function {
     private final FunctionType type;
     private final String expression;
 
